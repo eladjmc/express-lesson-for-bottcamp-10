@@ -5,7 +5,7 @@ const filePath = path.join(path.resolve(), 'data/movies.json');
 
 // Function to initialize the movies file if it doesn't exist
 const initializeMoviesFile = () => {
-  if (!fs.existsSync(filePath)) {
+  if (!fs.existsSync('./movies.json')) {
     // If the file doesn't exist, create it with an empty array or default content
     fs.writeFileSync(filePath, JSON.stringify([], null, 2), 'utf8');
   }
@@ -14,7 +14,7 @@ const initializeMoviesFile = () => {
 const readMoviesFromFile = () => {
   try {
     initializeMoviesFile(); // Ensure the file exists before reading
-    const fileData = fs.readFileSync(filePath, 'utf8');
+    const fileData = fs.readFileSync("./movies.json", 'utf8');
     return JSON.parse(fileData);
   } catch (error) {
     throw new Error('Error reading from file');
@@ -24,7 +24,7 @@ const readMoviesFromFile = () => {
 const writeMoviesToFile = (movies) => {
   try {
     initializeMoviesFile(); // Ensure the file exists before writing
-    fs.writeFileSync(filePath, JSON.stringify(movies, null, 2), 'utf8');
+    fs.writeFileSync("./movies.json", JSON.stringify(movies), 'utf8');
   } catch (error) {
     throw new Error('Error writing to file');
   }
