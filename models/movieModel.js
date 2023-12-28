@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const filePath = path.join(path.resolve(), 'data/movies.json');
+const filePath = path.join(path.resolve(), 'tmp/movies.json');
 
 const readMoviesFromFile = () => {
   try {
