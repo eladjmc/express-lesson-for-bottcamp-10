@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // Movie Routes
-app.use("/api/v1//movies", movieRoutes);
+app.use("/api/v1/movies", movieRoutes);
 
 // Error Handling Middleware
 app.use(errorHandler);
