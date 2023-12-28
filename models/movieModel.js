@@ -5,6 +5,7 @@ const filePath = path.join(path.resolve(), 'data/movies.json');
 
 const readMoviesFromFile = () => {
   try {
+    console.log(filePath);
     const fileData = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(fileData);
   } catch (error) {
