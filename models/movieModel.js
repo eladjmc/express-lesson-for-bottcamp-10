@@ -1,7 +1,6 @@
 import fs from 'fs';
-import path from 'path';
 
-const filePath = path.join(path.resolve(), 'data/movies.json');
+const filePath = 'data/movies.json';
 
 // Function to initialize the movies file if it doesn't exist
 const initializeMoviesFile = () => {
