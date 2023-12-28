@@ -7,7 +7,7 @@ const filePath = path.join(path.resolve(), 'data/movies.json');
 const initializeMoviesFile = () => {
   if (!fs.existsSync('./movies.json')) {
     // If the file doesn't exist, create it with an empty array or default content
-    fs.writeFileSync("./movies.json", JSON.stringify([], null, 2), 'utf8');
+    fs.writeFileSync("./movies.json", JSON.stringify([]), 'utf8');
     console.log("created file");
   }
 };
