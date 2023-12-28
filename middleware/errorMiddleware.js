@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import STATUS_CODE from "../constants/statusCodes.js";
 
 export const errorHandler = (err, req, res, next) => {
